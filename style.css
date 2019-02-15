@@ -1,0 +1,13 @@
+body {
+width:90%; 
+margin:0 auto; 
+text-align:center;
+background-color:#111111;
+color:#ffffff;
+}
+
+video {
+#  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
