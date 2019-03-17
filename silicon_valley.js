@@ -1,4 +1,4 @@
-var serial_dir = 'sv';
+var serial_dir = 'silicon_valley';
 var serial_name = 'Кремниевая долина';
 var cook_seria = serial_dir + '_seria';
 var cur_seria;
