@@ -1,5 +1,5 @@
-var serial_dir = 'silicon_valley';
-var serial_name = 'Кремниевая долина';
+var serial_dir = 'game_of_thrones';
+var serial_name = 'Игра престолов';
 var cook_seria = serial_dir + '_seria';
 var cur_seria;
 var arr_a = [];
