@@ -55,7 +55,7 @@ function set_seria(p1) {
   cur_seria = p1;
   $.cookie(cook_seria, cur_seria);
   if (cur_seria >= 0 && cur_seria <= arr_a.length - 1) {
-    var cur_seria_str = 'video/' + serial_dir + '/s' + arr_a[cur_seria][0] + 'e' + arr_a[cur_seria][1] + '.mp4';
+    var cur_seria_str = 'video/' + serial_dir + '/s' + arr_a[cur_seria][0] + 'e' + arr_a[cur_seria][1] + '.m4v';
     //$('#id_video').replaceWith('<video id="id_video" preload="auto" controls> <source id="id_src" src="' + cur_seria_str + '"> </video>');
     $('#id_video').attr('src', cur_seria_str);
     $('#seria_name').text('Сезон ' + arr_a[cur_seria][0] + ' cерия ' + arr_a[cur_seria][1]);
