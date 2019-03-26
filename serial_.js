@@ -1,3 +1,5 @@
+var str = location.href;
+alert(str.substring(str.lastIndexOf('/')+1,str.lastIndexOf('.html')));
 var serial_dir = 'silicon_valley';
 var serial_name = 'Кремниевая долина';
 var cook_seria = serial_dir + '_seria';

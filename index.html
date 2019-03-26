@@ -26,107 +26,27 @@
   <meta name="description" content="Лучшие сериалы">
 </head>
 
-<body style="background-color:#111111; color:#ffffff;">
+<body onload="set_list()" style="background-color:#111111; color:#ffffff;">
   <style type="text/css">
     div.col {
       min-width: 300px
     }
   </style>
-  <div class="row" style="text-align: center;">
-    <div class="col">
-      <h1>Сериалы</h1>
+  <div class="container">
+    <div class="row" style="text-align: center;">
+      <div class="col">
+        <h1>Сериалы</h1>
+        <br>
+      </div>
     </div>
   </div>
-  <div class="container-fluid" style="max-width: 1300px; text-align: center;">
-    <div class="row">
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/silicon_valley.html"><img src="image/silicon_valley_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Кремниевая долина</h5>
-            <p class="card-text text-left">Американский комедийный сериал о бизнесе в кремниевой долине.</p>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/game_of_thrones.html"><img src="image/game_of_thrones_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Игра престолов</h5>
-            <p class="card-text text-left">Американский телесериал в жанре фэнтези, основанный на цикле романов «Песнь Льда и Огня» Джорджа Р. Р.</p>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/big_bang_theory.html"><img src="image/big_bang_theory_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Теория большого взрыва</h5>
-            <p class="card-text text-left">Американский ситком, повествует о жизни двух молодых талантливых физиков, их привлекательной соседке, и их друзьях.</p>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/sherlock.html"><img src="image/sherlock_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Шерлок</h5>
-            <p class="card-text text-left">Британский телесериал. Сюжет основан на произведениях сэра Артура Конан Дойля о детективе Шерлоке Холмсе, однако действие происходит в наши дни.</p>
-          </div>
-        </div>
-        <br>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="row">
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/doctor_who.html"><img src="image/doctor_who_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Доктор кто</h5>
-            <p class="card-text text-left">Культовый британский научно-фантастический телесериал об инопланетном путешественнике во времени, известном как Доктор.</p>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/true_detective.html"><img src="image/true_detective_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Настоящий детектив</h5>
-            <p class="card-text text-left">Американский телесериал в жанре криминальной драмы. Сериал выпускается в формате антологии — в каждом сезоне свой сюжет и действующие лица.</p>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/.html"><img src="image/_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text text-left"></p>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col">
-        <div class="card bg-dark">
-          <a href="/.html"><img src="image/_prev.jpg" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text text-left"></p>
-          </div>
-        </div>
-        <br>
-      </div>
-    </div>
+  <div id="serial_list" class="container-fluid" style="max-width: 1300px; text-align: center;">
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.js" </script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="serial.js"></script>
 </body>
 
 </html>
