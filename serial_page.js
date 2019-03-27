@@ -1,12 +1,28 @@
-var serial_dir = 'game_of_thrones';
-var serial_name = 'Игра престолов';
+var str = location.href;
+var serial_dir = str.substring(str.lastIndexOf('/') + 1, str.lastIndexOf('.html'));
+var serial_name = '';
 var cook_seria = serial_dir + '_seria';
 var cur_seria;
 var arr_a = [];
 
-$('[id=serial_name]').text(serial_name);
-$('meta[name=description]').attr('content', serial_name);
-$('[id=serial_name][class=navbar-brand]').attr('href', '/' + serial_dir + '.html');
+function get_serial_name() {
+  $.get(location.protocol + '//' + location.host + '/serial.list',
+    function(data) {
+      var arr_c = data.split('\n');
+      arr_b = [];
+      arr_c.forEach(function(item, i, arr_c) {
+        arr_b.push(a = item.split('|'));
+        if (arr_b[i][1] == serial_dir) {
+          serial_name = arr_b[i][2];
+          return;
+        }
+      })
+      $('[id=serial_name]').text(serial_name);
+      $('meta[name=description]').attr('content', serial_name);
+      $('[id=serial_name][class=navbar-brand]').attr('href', '/' + serial_dir + '.html');
+    })
+}
+get_serial_name();
 
 function callback(data) {
   var arr_s = data.split('\n');
@@ -44,7 +60,7 @@ function callback(data) {
 }
 
 function set_nav() {
-    $.get(location.protocol + '//' + location.host + '/'+serial_dir+'.list',
+  $.get(location.protocol + '//' + location.host + '/' + serial_dir + '.list',
     function(data) {
       callback(data);
     }
@@ -55,8 +71,9 @@ function set_seria(p1) {
   cur_seria = p1;
   $.cookie(cook_seria, cur_seria);
   if (cur_seria >= 0 && cur_seria <= arr_a.length - 1) {
-    var cur_seria_str = 'video/' + serial_dir + '/s' + arr_a[cur_seria][0] + 'e' + arr_a[cur_seria][1] + '.m4v';
+    var cur_seria_str = 'video/' + serial_dir + '/s' + arr_a[cur_seria][0] + 'e' + arr_a[cur_seria][1] + '.mp4';
     //$('#id_video').replaceWith('<video id="id_video" preload="auto" controls> <source id="id_src" src="' + cur_seria_str + '"> </video>');
+    $('#id_video').attr('poster', 'image/' + serial_dir + '_poster.jpg');
     $('#id_video').attr('src', cur_seria_str);
     $('#seria_name').text('Сезон ' + arr_a[cur_seria][0] + ' cерия ' + arr_a[cur_seria][1]);
     $('#seria_desc').text(arr_a[cur_seria][2]);
