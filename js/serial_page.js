@@ -6,7 +6,7 @@ var cur_seria;
 var arr_a = [];
 
 function get_serial_name() {
-  $.get(location.protocol + '//' + location.host + '/serial.list',
+  $.get(location.protocol + '//' + location.host + '/lists/serial.list',
     function(data) {
       var arr_c = data.split('\n');
       arr_b = [];
@@ -60,7 +60,7 @@ function callback(data) {
 }
 
 function set_nav() {
-  $.get(location.protocol + '//' + location.host + '/' + serial_dir + '.list',
+  $.get(location.protocol + '//' + location.host + '/lists/' + serial_dir + '.list',
     function(data) {
       callback(data);
     }

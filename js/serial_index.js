@@ -29,7 +29,7 @@ function callback(data) {
 }
 
 function set_list() {
-  $.get(location.protocol + '//' + location.host + '/serial.list',
+  $.get(location.protocol + '//' + location.host + '/lists/serial.list',
     function(data) {
       callback(data);
     }
