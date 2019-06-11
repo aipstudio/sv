@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html_text_1 = '''<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,7 +37,9 @@
       <ul id="nav" class="navbar-nav">
       </ul>
     </div>
-  </nav><div class="container-fluid" style="max-width: 1280px"><div class="row">
+  </nav>'''
+
+html_text_2 = '''<div class="row">
       <div class="col" style="text-align: center;">
         <h3 id="seria_name"> </h3>
         <h4 id="seria_desc"> </h4>
@@ -46,10 +48,10 @@
     </div>
     <div class="row">
       <div class="col">
-        <button type="button" class="btn btn-secondary float-left" onClick="back_click()">Предыдущая серия</button>
+        <button type="button" class="btn btn-secondary float-left" onClick="back_click()">РџСЂРµРґС‹РґСѓС‰Р°СЏ СЃРµСЂРёСЏ</button>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-secondary float-right" onClick="next_click()">Следующая серия</button>
+        <button type="button" class="btn btn-secondary float-right" onClick="next_click()">РЎР»РµРґСѓСЋС‰Р°СЏ СЃРµСЂРёСЏ</button>
       </div>
     </div>
     <div class="row">
@@ -75,4 +77,21 @@
   <script src="js/serial_page.js"></script>
 </body>
 
-</html>
+</html>'''
+
+
+f = open("lists\serial.list", "r", encoding="utf8")
+for x in f:
+  y = x.split('|')
+  print(y[1])
+  ff = open(y[1]+".html", "w")
+  if y[1] == 'big_bang_theory':
+    html_text_width = '<div class="container-fluid" style="max-width: 1024px">'
+  elif y[1] == 'silicon_valley':
+    html_text_width = '<div class="container-fluid" style="max-width: 854px">'
+  else :
+    html_text_width = '<div class="container-fluid" style="max-width: 1280px">'
+  html_text = html_text_1 + html_text_width + html_text_2  
+  ff.write(html_text)
+  ff.close()
+f.close()
