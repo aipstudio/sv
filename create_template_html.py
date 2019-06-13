@@ -79,19 +79,20 @@ html_text_2 = '''<div class="row">
 
 </html>'''
 
-
 f = open("lists\serial.list", "r", encoding="utf8")
 for x in f:
   y = x.split('|')
   print(y[1])
-  ff = open(y[1]+".html", "w")
+  ff = open(y[1]+".html", "w", encoding="utf8")
   if y[1] == 'big_bang_theory':
     html_text_width = '<div class="container-fluid" style="max-width: 1024px">'
   elif y[1] == 'silicon_valley':
     html_text_width = '<div class="container-fluid" style="max-width: 854px">'
+  elif y[1] == 'black_mirror':
+    html_text_width = '<div class="container-fluid" style="max-width: 1152px">'
   else :
     html_text_width = '<div class="container-fluid" style="max-width: 1280px">'
-  html_text = html_text_1 + html_text_width + html_text_2  
+  html_text = html_text_1 + html_text_width + html_text_2
   ff.write(html_text)
   ff.close()
 f.close()
