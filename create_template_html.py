@@ -37,9 +37,11 @@ html_text_1 = '''<!DOCTYPE html>
       <ul id="nav" class="navbar-nav">
       </ul>
     </div>
-  </nav>'''
+  </nav>
+  <div class="container-fluid" style="max-width: '''
 
-html_text_2 = '''<div class="row">
+html_text_2 = '''px">
+    <div class="row">
       <div class="col" style="text-align: center;">
         <h3 id="seria_name"> </h3>
         <h4 id="seria_desc"> </h4>
@@ -85,13 +87,13 @@ for x in f:
   print(y[1])
   ff = open(y[1]+".html", "w", encoding="utf8")
   if y[1] == 'big_bang_theory':
-    html_text_width = '<div class="container-fluid" style="max-width: 1024px">'
+    html_text_width = '1024'
   elif y[1] == 'silicon_valley':
-    html_text_width = '<div class="container-fluid" style="max-width: 854px">'
+    html_text_width = '854'
   elif y[1] == 'black_mirror':
-    html_text_width = '<div class="container-fluid" style="max-width: 1152px">'
+    html_text_width = '1152'
   else :
-    html_text_width = '<div class="container-fluid" style="max-width: 1280px">'
+    html_text_width = '1280'
   html_text = html_text_1 + html_text_width + html_text_2
   ff.write(html_text)
   ff.close()
