@@ -40,7 +40,7 @@ html_text_1 = '''<!DOCTYPE html>
   </nav>
   <div class="container-fluid" style="max-width: '''
 
-html_text_2 = '''px">
+html_text_2 = '''px;">
     <div class="row">
       <div class="col" style="text-align: center;">
         <h3 id="seria_name"> </h3>
