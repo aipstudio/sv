@@ -1,4 +1,4 @@
-html_text_1 = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,9 +38,7 @@ html_text_1 = '''<!DOCTYPE html>
       </ul>
     </div>
   </nav>
-  <div class="container-fluid" style="max-width: '''
-
-html_text_2 = '''px;">
+  <div class="container-fluid" style="max-width: 1024px;">
     <div class="row">
       <div class="col" style="text-align: center;">
         <h3 id="seria_name"> </h3>
@@ -79,22 +77,4 @@ html_text_2 = '''px;">
   <script src="js/serial_page.js"></script>
 </body>
 
-</html>'''
-
-f = open("lists\serial.list", "r", encoding="utf8")
-for x in f:
-  y = x.split('|')
-  print(y[1])
-  ff = open(y[1]+".html", "w", encoding="utf8")
-  if y[1] == 'big_bang_theory' or y[1] == 'the_wire':
-    html_text_width = '1024'
-  elif y[1] == 'silicon_valley':
-    html_text_width = '854'
-  elif y[1] == 'black_mirror':
-    html_text_width = '1152'
-  else :
-    html_text_width = '1280'
-  html_text = html_text_1 + html_text_width + html_text_2
-  ff.write(html_text)
-  ff.close()
-f.close()
+</html>
